@@ -10,8 +10,7 @@ let mainWindow
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
-    frame: false
+    height: 600
   })
 
   mainWindow.loadURL(url.format({
@@ -25,7 +24,10 @@ function createWindow() {
   mainWindow.on('closed', function () {
     mainWindow = null
   })
+
+  mainWindow.setMenu(null);
 }
+
 app.on('ready', createWindow)
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
