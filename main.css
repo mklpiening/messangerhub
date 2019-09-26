@@ -148,10 +148,11 @@ body {
 #navigation button {
     height: 100%;
     background: #000000;
-    color: #ffffff;
+    color: #555555;
     border: none;
 }
 
+#navigation button.selected:hover,
 #navigation button:hover {
     background: #ffffff;
     color: #000000;
@@ -162,8 +163,8 @@ body {
 }
 
 #navigation button.selected {
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
+    color: #ffffff;
+    background: #000000;
 }
 
 #views {
