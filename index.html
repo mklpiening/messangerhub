@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Messanger</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-          webview {
+
+<head>
+  <meta charset="UTF-8">
+  <title>Messanger</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    webview {
       width: 100%;
       height: 100%;
     }
-    </style>
-  </head>
-  <body id="messanger">
-    <nav id="navigation">
-      <button type="button" id="whatsapp">
-        Whatsapp
-      </button>
-      <button type="button" id="telegram">
-        Telegram
-      </button>
-      <button type="button" id="rocketchat">
-        Rocketchat
-      </button>
-    </nav>
-    <div id="views">
-      <webview id="whatsappView" class="page" src="https://web.whatsapp.com" autosize="on" useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"></webview>
-      <webview id="telegramView" class="page" src="https://web.telegram.org" autosize="on" useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"></webview>
-      <webview id="rocketchatView" class="page" src="https://rocketchat.informatik.uos.de" autosize="on" useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"></webview>
-    </div>
+  </style>
+</head>
+
+<body id="messanger">
+  <nav id="navigation">
+    <button type="button" id="whatsappBtn">
+      Whatsapp
+    </button>
+    <button type="button" id="telegramBtn">
+      Telegram
+    </button>
+    <button type="button" id="rocketchatBtn">
+      Rocketchat
+    </button>
+  </nav>
+  <div id="views">
+    <webview id="whatsappView" class="page" src="https://web.whatsapp.com" autosize="on"
+      useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36">
+    </webview>
+
+    <webview id="telegramView" class="page" src="https://web.telegram.org" autosize="on"></webview>
+
+    <webview id="rocketchatView" class="page" src="https://rocketchat.informatik.uos.de" autosize="on"></webview>
+  </div>
   <script>
     require('./renderer.js')
   </script>
+
 </html>

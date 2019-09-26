@@ -2,45 +2,45 @@ var ById = function (id) {
     return document.getElementById(id);
 }
 
-var whatsapp = ById('whatsapp'),
-    telegram = ById('telegram'),
-    rocketchat = ById('rocketchat'),
+var whatsappBtn = ById('whatsappBtn'),
+    telegramBtn = ById('telegramBtn'),
+    rocketchatBtn = ById('rocketchatBtn'),
     whatsappView = ById('whatsappView'),
     telegramView = ById('telegramView'),
     rocketchatView = ById('rocketchatView');
 
 function showWhatsapp() {
-    telegramView.style.visibility = 'visible';
+    whatsappView.style.visibility = 'visible';
     telegramView.style.visibility = 'hidden';
     rocketchatView.style.visibility = 'hidden';
 
-    whatsapp.className = 'selected';
-    telegram.className = '';
-    rocketchat.className = '';
+    whatsappBtn.className = 'selected';
+    telegramBtn.className = '';
+    rocketchatBtn.className = '';
 }
 
 function showTelegram() {
-    telegramView.style.visibility = 'hidden';
+    whatsappView.style.visibility = 'hidden';
     telegramView.style.visibility = 'visible';
     rocketchatView.style.visibility = 'hidden';
 
-    whatsapp.className = '';
-    telegram.className = 'selected';
-    rocketchat.className = '';
+    whatsappBtn.className = '';
+    telegramBtn.className = 'selected';
+    rocketchatBtn.className = '';
 }
 
 function showRocketchat() {
-    telegramView.style.visibility = 'hidden';
+    whatsappView.style.visibility = 'hidden';
     telegramView.style.visibility = 'hidden';
     rocketchatView.style.visibility = 'visible';
 
-    whatsapp.className = '';
-    telegram.className = '';
-    rocketchat.className = 'selected';
+    whatsappBtn.className = '';
+    telegramBtn.className = '';
+    rocketchatBtn.className = 'selected';
 }
 
-whatsapp.addEventListener('click', showWhatsapp);
-telegram.addEventListener('click', showTelegram);
-rocketchat.addEventListener('click', showRocketchat);
+whatsappBtn.addEventListener('click', showWhatsapp);
+telegramBtn.addEventListener('click', showTelegram);
+rocketchatBtn.addEventListener('click', showRocketchat);
 
 showWhatsapp();
