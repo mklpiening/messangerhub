@@ -1,0 +1,15 @@
+{
+  "name": "messanger",
+  "version": "1.0.0",
+  "description": "A minimal Electron messanger application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "~1.6.2"
+  },
+  "dependencies": {
+    "electron": "^1.6.2"
+  }
+}
